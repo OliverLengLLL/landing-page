@@ -11,12 +11,41 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			@keyframes fadeIn {
+				from {
+					opacity: 0;
+				}
+				to {
+					opacity: 1;
+				}
+			}	
+			.fade-in {
+				animation: fadeIn 1.5s ease-in;
+			}
+			.intro-header {
+				margin-bottom: 40px; /* Adjust the value as needed */
+			}
+			.highlight {
+            color: #2A2E37; /* Gold color for highlights */
+            font-weight: bold;
+			font-style: italic;
+			}
+			.semi_highlight {
+				color:#2A2E37;
+				font-family: 'Open Sans';
+				font-style: italic;
+			}
+			.icon {
+				margin-right: 10px;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
 		<!-- Header -->
 			<header id="header">
-				<h1>Big Picture</h1>
+				<h1>Welcome to My World</h1>
 				<nav>
 					<ul>
 						<li><a href="#intro">Intro</a></li>
@@ -31,11 +60,21 @@
 		<!-- Intro -->
 			<section id="intro" class="main style1 dark fullscreen">
 				<div class="content">
-					<header>
+					<header class="fade-in">
 						<h2>Oliver Leng</h2>
 					</header>
-					<p>Innovative software engineer with expertise in AI and machine learning, <br/>proficient in Java, Python, and React, and experienced in developing dynamic web applications and enhancing gaming experiences. Passionate about leveraging technology to drive innovation and optimize performance.</p>
-					<footer>
+					<hr class="fade-in">
+					<p class="intro-text fade-in">
+						<h4 style="font-size: 1.8em;">Master's student at NYU studying Computer Science.</h4>
+					</p>
+					<p class="intro-text fade-in">
+						<h4 style="font-size: 1.6em;">A software engineer at BreatheIT.</h4>
+					</p>
+					<hr class="fade-in">
+					<p class="fade-in">
+						I am passionate about technology and its potential to change the world.
+					</p>
+					<foote class="fade-in">
 						<a href="#one" class="button style2 down">More</a>
 					</footer>
 				</div>
@@ -43,15 +82,21 @@
 
 		<!-- One -->
 			<section id="one" class="main style2 right dark fullscreen">
-				<div class="content box style2">
+				<div class="content box style2 fade-in">
 					<header>
 						<h2>What I Do</h2>
 					</header>
-					<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
-					Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis arcu,
-					id varius justo euismod in. Curabitur egestas consectetur magna.</p>
+					<p>
+						As a software engineer at <span class="highlight">BreatheIT</span>, I play a crucial role in the development and optimization of UltopiaAI, <span class="semi_highlight">a cutting-edge SaaS product</span>. My key responsibilities include:
+					</p>
+					<ul>
+						<li><span class="highlight">Design and Development:</span> Assisted in the design and development of UltopiaAI using <span class="semi_highlight">Node.js, JavaScript, Python, and React</span>.</li>
+						<li><span class="highlight">AI Implementation:</span> Developed and implemented <span class="semi_highlight">AI models</span> to enhance functionality and performance.</li>
+						<li><span class="highlight">Integration:</span> Collaborated with team members to integrate <span class="semi_highlight">front-end and back-end</span> components.</li>
+						<li><span class="highlight">Testing and Optimization:</span> Conducted thorough <span class="semi_highlight">testing and optimization </span> to ensure the reliability and efficiency of UltopiaAI.</li>
+					</ul>
 				</div>
-				<a href="#two" class="button style2 down anchored">Next</a>
+				<a href="#two" class="button style2 down anchored fade-in">Next</a>
 			</section>
 
 		<!-- Two -->
@@ -60,9 +105,7 @@
 					<header>
 						<h2>Who I Am</h2>
 					</header>
-					<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
-					Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis arcu,
-					id varius justo euismod in. Curabitur egestas consectetur magna.</p>
+					<p>I am a <span class="semi_highlight">passionate</span> and <span class="semi_highlight"> self-motivated</span>  learner with a deep love for <span class="semi_highlight">computer science</span> and <span class="semi_highlight">mathematics</span>, particularly <span class="semi_highlight">abstract algebra and linear algebra</span>. Beyond academics, I enjoy <span class="semi_highlight">playing basketball, working out, and hiking</span>. My goal is to become a <span class="semi_highlight">software engineer</span>, driven by my curiosity and commitment to applying new technologies in my daily life. </p>
 				</div>
 				<a href="#work" class="button style2 down anchored">Next</a>
 			</section>
