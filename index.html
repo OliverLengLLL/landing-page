@@ -46,6 +46,43 @@
 			.icon {
 				margin-right: 10px;
 			}
+			.gallery img {
+            	border-radius: 8px;
+			}
+			.modal {
+				display: none; 
+				position: fixed; 
+				z-index: 1; 
+				padding-top: 60px; 
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				overflow: auto; 
+				background-color: rgb(0,0,0); 
+				background-color: rgba(0,0,0,0.4); 
+				border-radius: 1em;
+			}
+			.modal-content {
+				background-color: #fefefe;
+				margin: 5% auto; 
+				padding: 20px;
+				border: 1px solid #888;
+				width: 80%; 
+				border-radius: 1em;
+			}
+			.close {
+				color: #aaa;
+				float: right;
+				font-size: 28px;
+				font-weight: bold;
+			}
+			.close:hover,
+			.close:focus {
+				color: black;
+				text-decoration: none;
+				cursor: pointer;
+			}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -140,10 +177,10 @@
 					<!-- Gallery  -->
 						<div class="gallery">
 							<article class="from-left">
-								<a href="images/fulls/01.jpg" class="image fit"><img src="images/thumbs/01.jpg" title="Vel Venenatis Cep" alt="" /></a>
+								<a href="#;" class="image fit" onclick="openModal('modal1')"><img src="images/thumbs/finance.jpg" title="Healthy Budget" alt="Healthy Budget" /></a>
 							</article>
 							<article class="from-right">
-								<a href="images/fulls/02.jpg" class="image fit"><img src="images/thumbs/02.jpg" title="Pellentesque at" alt="" /></a>
+								<a href="images/fulls/02.jpg" data-description="Description" class="image fit"><img src="images/thumbs/02.jpg" title="Pellentesque at" alt="" /></a>
 							</article>
 							<article class="from-left">
 								<a href="images/fulls/03.jpg" class="image fit"><img src="images/thumbs/03.jpg" title="Cep Aenean" alt="" /></a>
@@ -158,16 +195,25 @@
 								<a href="images/fulls/06.jpg" class="image fit"><img src="images/thumbs/06.jpg" title="Nibh ut" alt="" /></a>
 							</article>
 						</div>
-
 				</div>
 			</section>
 
+		<!-- The Modal -->
+			<div id="modal1" class="modal">
+				<div class="modal-content">
+					<span class="close" onclick="closeModal('modal1')">&times;</span>
+					<img src="images/fulls/healthy_budget.jpeg" alt="Healthy Budget" style="width:100%">
+					<h2>Healthy Budget</h2>
+					<p>This project involves developing a personal finance management application that helps users track their expenses and manage their budgets effectively. It includes features like real-time currency conversion, interactive financial dashboards, and expense splitting.</p>
+					<a href="https://github.com/your-github-repo" target="_blank">View on GitHub</a>
+				</div>
+			</div>
 		<!-- Contact -->
 			<section id="contact" class="main style3 secondary">
 				<div class="content">
 					<header>
 						<h2>Say Hello.</h2>
-						<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.</p>
+						<p>Feel free to get in touch with me for any inquiries or collaborations. I really appreciate any insigts and advice.</p>
 					</header>
 					<div class="box">
 						<form method="post" action="#">
@@ -189,17 +235,16 @@
 
 				<!-- Icons -->
 					<ul class="icons">
-						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-						<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-						<li><a href="#" class="icon brands fa-pinterest"><span class="label">Pinterest</span></a></li>
+						<li><a href="https://x.com/OliverLeng97038" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="tel:+18582525063" class="icon solid fa-phone"><span class="label">Phone</span></a></li>
+						<li><a href="https://www.instagram.com/lengxinhai/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="https://www.linkedin.com/in/oliverleng/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/OliverLengLLL" class="icon brands fa-github"><span class="label">Github</span></a></li>
 					</ul>
 
 				<!-- Menu -->
 					<ul class="menu">
-						<li>&copy; Untitled</li>
+						<li>&copy; Oliver Leng</li>
 					</ul>
 
 			</footer>
@@ -213,6 +258,15 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				function openModal(modalId) {
+					document.getElementById(modalId).style.display = "block";
+				}
+		
+				function closeModal(modalId) {
+					document.getElementById(modalId).style.display = "none";
+				}
+			</script>
 
 	</body>
 </html>
